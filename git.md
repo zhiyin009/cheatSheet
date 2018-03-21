@@ -64,18 +64,18 @@
     .gitconfig                          # 当前用户配置文件
 
 # ignore -- 忽略文件
-## 有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件，每次git status都会显示Untracked files ...
-## 这个问题解决起来也很简单，在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。
-## 不需要从头写.gitignore文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：http://github.com/github/gitignore
-## 忽略文件的原则是：
-## 1.忽略操作系统自动生成的文件，比如缩略图等；
-## 2.忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；
-## 3.忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
+    有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件，每次git status都会显示Untracked files ...
+    这个问题解决起来也很简单，在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。
+    不需要从头写.gitignore文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：http://github.com/github/gitignore
+    忽略文件的原则是：
+    1.忽略操作系统自动生成的文件，比如缩略图等；
+    2.忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；
+    3.忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
 
 # scene -- 情景 
-## 情景1：写错了，而且add过了，先用git reset HEAD file撤回暂存区，然后git checkout -- file撤回工作区。
-## 情景2：Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。https速度慢，每次推送都必须输入口令，但是在某些公司只开放http端口。
-## 情景3：conflict出现时，Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，修改后保存再提交
-## 情景4：开发的时候，突然需要修BUG。可以先git stash，然后创建一个新的分支issue，在issue中debug提交后，merge回master，再git stash pop继续开发
-## 情景5：同事已向origin/dev分支推送了，碰巧自己也对同样的文件作了修改，导致冲突。先用git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送
-## 情景6：git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令：git branch --set-upstream dev origin/dev
+    情景1：写错了，而且add过了，先用git reset HEAD file撤回暂存区，然后git checkout -- file撤回工作区。
+    情景2：Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。https速度慢，每次推送都必须输入口令，但是在某些公司只开放http端口。
+    情景3：conflict出现时，Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，修改后保存再提交
+    情景4：开发的时候，突然需要修BUG。可以先git stash，然后创建一个新的分支issue，在issue中debug提交后，merge回master，再git stash pop继续开发
+    情景5：同事已向origin/dev分支推送了，碰巧自己也对同样的文件作了修改，导致冲突。先用git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送
+    情景6：git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令：git branch --set-upstream dev origin/dev
