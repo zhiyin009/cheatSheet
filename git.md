@@ -1,9 +1,8 @@
-'''
+
     学习笔记 廖雪峰git教程
-    https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375233990231ac8cf32ef1b24887a5209f83e01cb94b000
-    
+    https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375233990231ac8cf32ef1b24887a5209f83e01cb94b000 
     Create time:18-02-24
-'''
+
 # version -- 版本
     git log                             # 打印历史版本 | | 可选参数：--graph --pretty=oneline --abbrev-commit 打印版本分支图
     git reflog                          # 历史操作
