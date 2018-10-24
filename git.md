@@ -25,6 +25,7 @@
     git pull                            # 拉取最新版本，参考情景5
     git push -n origin master           # 第一次推送master分支所有内容
     git push origin master              # 推送master分支到origin库
+    git push origin HEAD --force .      # 强制推送
 
 # branch -- 分支
     git branch                          # 打印分支列表，情景6
